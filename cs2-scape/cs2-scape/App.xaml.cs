@@ -1,6 +1,4 @@
-﻿using System.Configuration;
-using System.Data;
-using System.Windows;
+﻿using System.Windows;
 
 namespace cs2_scape;
 
@@ -9,4 +7,14 @@ namespace cs2_scape;
 /// </summary>
 public partial class App : Application
 {
+    
+
+    private void Cs2scape_Startup(object sender, StartupEventArgs e)
+    {
+        var mainWindow = new MainWindow
+        {
+            Title = "cs2-scape"
+        };
+        mainWindow.Show();
+    }
 }
