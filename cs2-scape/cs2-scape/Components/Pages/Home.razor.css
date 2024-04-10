@@ -1,4 +1,16 @@
 h3 {
-    text-decoration: underline;
     color: blue;
+}
+
+.btn_hello {
+    min-height: 35px;
+    border-radius: 3px;
+    border: none;
+    color: white;
+    background-color: blue;
+    box-shadow: none;
+    padding: 5px 20px;
+}
+.btn_hello:hover {
+    box-shadow: blue 0 0 0 2px;
 }
