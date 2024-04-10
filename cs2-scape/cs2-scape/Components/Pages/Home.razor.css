@@ -2,7 +2,7 @@ h3 {
     color: blue;
 }
 
-.btn_hello {
+.btn {
     min-height: 35px;
     border-radius: 3px;
     border: none;
@@ -11,6 +11,6 @@ h3 {
     box-shadow: none;
     padding: 5px 20px;
 }
-.btn_hello:hover {
+.btn:hover {
     box-shadow: blue 0 0 0 2px;
 }

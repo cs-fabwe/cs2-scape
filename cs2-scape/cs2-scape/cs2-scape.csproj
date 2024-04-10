@@ -18,7 +18,6 @@
 
     <ItemGroup>
       <Folder Include="DataModels\" />
-      <Folder Include="Services\" />
     </ItemGroup>
 
 </Project>
