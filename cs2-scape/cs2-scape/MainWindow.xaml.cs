@@ -11,12 +11,6 @@ public partial class MainWindow : Window
 {
     public MainWindow()
     {
-        var serviceCollection = new ServiceCollection();
-        serviceCollection.AddWpfBlazorWebView();
-
-        var serviceProvider = serviceCollection.BuildServiceProvider();
-        Resources.Add("services", serviceProvider);
-        
         InitializeComponent();
     }
 }
