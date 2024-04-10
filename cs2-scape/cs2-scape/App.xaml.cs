@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using Microsoft.AspNetCore.Components.WebView.Wpf;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace cs2_scape;

@@ -16,9 +16,9 @@ public partial class MainWindow : Window
         UserFilesRepository files = new();
         files.AddFile(ConfigFileTypes.Autoexec, "C:\\autoexec.cfg");
         files.AddFile(ConfigFileTypes.VideoSettings, "C:\\videosettings.cfg");
-        files.AddFile(ConfigFileTypes.Custom, "C:\\custom1.cfg");
-        files.AddFile(ConfigFileTypes.Custom, "C:\\custom2.cfg");
-        files.AddFile(ConfigFileTypes.Custom, "C:\\custom3.cfg");
+        //files.AddFile(ConfigFileTypes.Custom, "C:\\custom1.cfg");
+        //files.AddFile(ConfigFileTypes.Custom, "C:\\custom2.cfg");
+        //files.AddFile(ConfigFileTypes.Custom, "C:\\custom3.cfg");
 
         string autoexecPath = files.GetExclusiveConfigFile(ConfigFileTypes.Autoexec);
         string videoSettingsPath = files.GetExclusiveConfigFile(ConfigFileTypes.VideoSettings);
