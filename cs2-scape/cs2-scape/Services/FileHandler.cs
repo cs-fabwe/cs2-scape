@@ -2,8 +2,22 @@ using System.IO;
 
 namespace cs2_scape.Services;
 
-public class FileHandler
+public static class FileHandler
 {
-    private string _currentFileName = String.Empty;
-    private string _fileExtensions = "";
+    public static string ReadFileContentAsString(string filePath)
+    {
+        string content = "";
+        try
+        {
+            StreamReader streamReader = new(filePath);
+            content = streamReader.ReadToEnd();
+            streamReader.Close();
+        }
+        catch (Exception)
+        {
+            content = "";
+        }
+
+        return content;
+    }
 }

@@ -1,5 +1,3 @@
-using System.Net;
-using System.Windows.Documents;
 using cs2_scape.Enums;
 
 namespace cs2_scape.Repositories;
