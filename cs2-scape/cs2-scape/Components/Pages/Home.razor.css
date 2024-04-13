@@ -14,3 +14,12 @@ h3 {
 .btn:hover {
     box-shadow: blue 0 0 0 2px;
 }
+
+.selection-menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.selection-menu-inactive {
+    display: none;
+}

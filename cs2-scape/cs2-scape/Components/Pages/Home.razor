@@ -1,5 +1,22 @@
 @page "/"
 
-<h3>@Message</h3>
-Saying Hello to cs2-scape from html blazor!
-<button class="btn" @onclick="@ChangeMessageAsync">Say Hello!</button>
+<div><h3>@Message</h3>
+    Saying Hello to cs2-scape from html blazor!
+    <button class="btn" @onclick="@ChangeMessageAsync">Say Hello!</button>
+</div>
+<div>
+    <h3>Lets find your Steam folder!</h3>
+    <div class="buttons">
+        <button class="btn">Auto-Search</button>
+        <button class="btn" @onclick="@ToggleFileSelection">
+            Search manually
+        </button>
+    </div>
+    <div class="@SelectionMenuClass">
+        Please select the path of your steam folder:
+        <div>
+            <input @onclick="@OpenFileDialogForFolders">
+            <button class="btn">Confirm</button>
+        </div>
+    </div>
+</div>
