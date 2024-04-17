@@ -1,29 +1,11 @@
 @page "/"
+@inject NavigationManager NavigationManager;
 
-<div><h3>@Message</h3>
-    Saying Hello to cs2-scape from html blazor!
-    <button class="btn" @onclick="@ChangeMessageAsync">Say Hello!</button>
-</div>
-<div>
-    <h3>Lets find your Steam folder!</h3>
-    <div class="buttons">
-        <button class="btn">Auto-Search</button>
-        <button class="btn" @onclick="@ToggleFileSelection">
-            Search manually
-        </button>
+<div class="component-container">
+    <div><h3>Welcome to CS2-Scape!</h3>
+        You'll now be guided through the setup process.<br/> Afterwards you can use the full functionality off the App!
     </div>
-    <div class="@SelectionMenuClass">
-        Please select the path of your steam folder:
-        <div>
-            <input 
-                class="@InputFieldClass"
-                @bind="@InputFieldData"
-                @onclick="@GetSteamPathFromOpenFolderDialog">
-            
-            <button class=@ButtonClass>
-                <div class="@LoaderClass"></div>
-                <svg  class="@CheckClass" fill="#0F0" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>
-            </button>
-        </div>
+    <div class="navbtn">
+        <button class="btn movenext-btn" @onclick="@MoveNext">Get started</button>
     </div>
 </div>

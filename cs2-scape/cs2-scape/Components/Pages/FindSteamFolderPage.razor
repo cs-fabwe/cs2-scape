@@ -1,0 +1,27 @@
+@page "/findsteam"
+
+<div class="component-container">
+    <h3 style="margin-bottom: 1px; user-select: none;">Lets find your Steam folder!</h3>
+    <p>If you installed Steam and Counter-Strike in the default directory,<br/>
+    click the <span class="highlight">Auto-Find</span> button. Otherwise use the <span class="highlight">manual search</span> and<br>
+    navigate to your Steam folder!</p>
+    <div id="buttons">
+        <button class="btn" disabled>Auto-Find</button>
+        <button class="btn" @onclick="@ToggleFileSelection">Manual search
+        </button>
+    </div>
+    <div class="@SelectionMenuClass">
+        Please select the path of your steam folder:
+        <div>
+            <input 
+                class="@InputFieldClass"
+                @bind="@InputFieldData"
+                @onclick="@GetSteamPathFromOpenFolderDialog">
+            
+            <button class=@ButtonClass>
+                <div class="@LoaderClass"></div>
+                <svg  class="@CheckClass" fill="#0F0" xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>
+            </button>
+        </div>
+    </div>
+</div>
