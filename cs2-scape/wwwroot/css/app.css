@@ -1,0 +1,13 @@
+html, body {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    padding: 5px;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    /*background-color: black;*/
+    background-color: rgba(0,0,0,0.3);
+    font-family: "Montserrat";
+}

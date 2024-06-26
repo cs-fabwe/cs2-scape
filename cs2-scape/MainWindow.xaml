@@ -7,9 +7,75 @@
         xmlns:local="clr-namespace:cs2_scape"
         xmlns:components="clr-namespace:cs2_scape.Components"
         mc:Ignorable="d"
-        Title="MainWindow" Height="900" Width="1600">
+        WindowStyle="None"
+        Title="cs2-scape" Height="900" Width="1600" AllowsTransparency="True" SnapsToDevicePixels="True">
+
+    
+    <WindowChrome.WindowChrome>
+        <WindowChrome  />
+    </WindowChrome.WindowChrome> 
+    <Window.Background>
+        <SolidColorBrush Opacity="0.2" Color="#1e1e1e"/>
+    </Window.Background>
+    <Window.BorderBrush>
+        <SolidColorBrush Color="Black"></SolidColorBrush>
+    </Window.BorderBrush>
+    <Window.BorderThickness>3</Window.BorderThickness>
     <Grid>
-        <blazor:BlazorWebView HostPage="wwwroot\index.html" Services="{DynamicResource services}" >
+        
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40">
+            </RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border BorderThickness="2" BorderBrush="Black">
+        </Border>
+        <Grid Grid.Row="0" MouseLeftButtonDown="Grid_MouseLeftButtonDown">
+            <Grid.Background>
+                <SolidColorBrush Color="#101010" Opacity="0.5"/>
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <TextBlock Opacity="1" Foreground="White" FontWeight="Bold" Text="CS2-Scape" Padding="20 0" FontSize="20" FontFamily="Montserrat"></TextBlock>
+            </StackPanel>
+            <StackPanel Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center">
+                <Button x:Name="btnClose" 
+                        Margin="0 0 15 0" 
+                        Padding="3" 
+                        Width="30"
+                        BorderBrush="Gray" 
+                        Background="Transparent" 
+                        Foreground="Gray"
+                        Click="btnClose_Click" 
+                        Opacity="0.495"
+                        WindowChrome.IsHitTestVisibleInChrome="True"
+                        Content="X"
+                        >
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Opacity" Value="1"/>
+                                    <Setter Property="Foreground" Value="Red" />
+                                    <Setter Property="Background" Value="Transparent"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </StackPanel>
+        </Grid>
+        <blazor:BlazorWebView 
+            HostPage="wwwroot\index.html" 
+            Services="{DynamicResource services}"
+            Grid.Row="1"
+            Background="Transparent" >
+            
     
             <blazor:BlazorWebView.RootComponents>
                 <blazor:RootComponent Selector="#app" ComponentType="{x:Type components:Routes}" />
