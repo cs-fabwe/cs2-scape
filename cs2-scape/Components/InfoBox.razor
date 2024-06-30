@@ -1,0 +1,17 @@
+﻿<div class="container">
+    <div class="titlebar" @onclick="@HandleExpand">
+        <div class="infotitle">
+            <span class="icon bx bx-info-circle"></span>
+            <span class="titletext">@Title</span>
+        </div>
+        <div class="expander">
+            <span class="@ExpandClass"></span>
+        </div>
+    </div>
+    @if (IsExpanded == true)
+    {
+        <div class="content">
+            @ChildContent
+        </div>
+    }
+</div>

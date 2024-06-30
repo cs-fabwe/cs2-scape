@@ -15,7 +15,7 @@
         <WindowChrome  />
     </WindowChrome.WindowChrome> 
     <Window.Background>
-        <SolidColorBrush Opacity="0.2" Color="#1e1e1e"/>
+        <SolidColorBrush Opacity="0.7" Color="#1e1e1e"/>
     </Window.Background>
     <Window.BorderBrush>
         <SolidColorBrush Color="Black"></SolidColorBrush>

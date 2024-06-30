@@ -3,6 +3,18 @@
 .page {
     display: flex;
     flex-direction: row;
+    
+}
+
+.content {
+    margin-right: 10px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    overflow: auto;
+    height: calc(100vh - 10px);
+    min-height: 100%;
+    box-sizing: border-box;
 }
 
 main {
@@ -10,11 +22,12 @@ main {
 }
 
 .sidebar {
-    background-color: #151515;
+    background-color: rgba(0,0,0,0.7);
     border-radius: 8px;
     padding: 5px;
-    width: 250px;
-    margin-right: 5px;
+    width: 270px;
+    margin-right: 15px;
+    height: 100%;
     /*height: 100vh;*/
     position: sticky;
     top: 0;

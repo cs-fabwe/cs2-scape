@@ -1,26 +1,35 @@
 ﻿@inject NavigationManager Navigation
-<div class="nav-header">
+@* <div class="nav-header">
     <p>CS2-Scape</p>
 </div>
 
-
+ *@
 <div >
     <nav class="">
         <div class="nav-item" @onclick='() => GoToPage("")'>
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All" @onclick:preventDefault=true>
+                <span class="icon bx bx-home"></span>
                 <span class="nav-text">Home</span>
             </NavLink>
         </div>
 
         <div class="nav-item" @onclick='() => GoToPage("counter")'>
-            <NavLink class="nav-link" href="counter" @onclick:preventDefault=true>
-                <span class="nav-text">Counter</span>
+            <NavLink class="nav-link" href="counter" Match="NavLinkMatch.Prefix" @onclick:preventDefault=true>
+                <span class="icon bx bx-plus-circle"></span>
+                <span class="nav-text" >Counter</span>
             </NavLink>
         </div>
 
         <div class="nav-item" @onclick='() => GoToPage("page1")'>
-            <NavLink class="nav-link" href="page1" @onclick:preventDefault=true>
+            <NavLink class="nav-link" href="page1" Match="NavLinkMatch.Prefix" @onclick:preventDefault=true>
+                <span class="icon bx bx-book-open"></span>
                 <span class="nav-text">Page1</span>
+            </NavLink>
+        </div>
+        <div class="nav-item" @onclick='() => GoToPage("sensitivity")'>
+            <NavLink class="nav-link" href="sensitivity" Match="NavLinkMatch.Prefix" @onclick:preventDefault=true>
+                <span class="icon bx bx-mouse"></span>
+                <span class="nav-text">Sensitivity Calculator</span>
             </NavLink>
         </div>
     </nav>

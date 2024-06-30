@@ -1,0 +1,38 @@
+label {
+    color: white;
+    font-size: 1rem;
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+
+.select-dropdown {
+    min-width: 150px;
+    max-width: 150px;
+    position: relative;
+
+}
+.select-dropdown select {
+    width: 100%;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0.7em 3em 0.7em 1em;
+    font-size: 1rem;
+    background: #1e1e1e;
+    color: lightgrey;
+    appearance: none;
+}
+.select-dropdown select:focus {
+        outline: none;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    color: white;
+    pointer-events: none;
+    display: block;
+    font-size: 24px;
+}

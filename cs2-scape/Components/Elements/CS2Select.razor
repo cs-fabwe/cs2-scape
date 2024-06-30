@@ -1,0 +1,13 @@
+<label>@Label</label>
+<div class="select-dropdown">
+    
+    <select @bind="SelectedValue" >
+        @foreach (var opt in Options)
+        {
+            <option value="@opt">@opt</option>
+        }
+    </select>
+    <span class='arrow bx bx-chevron-down'></span>
+</div>
+
+

@@ -1,0 +1,49 @@
+.container {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 2px blue;
+    transition: height .3s;
+}
+
+    .container:hover {
+        box-shadow: 0 0 12px blue;
+        transition: box-shadow 0.2s;
+    }
+
+.titlebar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 7px;
+}
+
+.infotitle {
+    font-size: 1.3rem;
+    color: lightgrey;
+    text-decoration: none;
+    user-select: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.icon {
+    margin-right: 5px;
+    font-size: 1.3rem;
+}
+.titletext {
+    margin-left: 5px;
+}
+.expander {
+    margin-left: auto;
+    margin-right: 10px;
+    align-items: center;
+    align-content: center;
+    color: lightgrey;
+}
+
+.content {
+    user-select: none;
+    font-size: 18px;
+    padding: 12px 40px 12px 12px;
+    color: lightgrey;
+}
